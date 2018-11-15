@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Payment form</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="ap.png">
+</head>
+<body>
+	<form action="" method="post" class="payment" autocomplete="off">
+		<div class="payment__head">
+			<div class="payment__owner">
+				<div class="payment__name" data-after="your total">Harold Finch</div>
+			</div>
+			<div class="payment__total" data-currency="$">88</div>
+		</div>
+		<div class="payment__body">
+			<div class="payment__group">
+				<label for="number" class="payment__label">Credit card number</label>
+				<input class="payment__input" type="text" name="number" id="number" required minlength="16" maxlength="16" pattern="\d+" placeholder=" ">
+			</div>
+			<div class="payment__group">
+				<label for="month" class="payment__label">Expiration date</label>
+				<div class="payment__input-row">
+					<select class="payment__input payment__input--60" name="month" id="month" required>
+						<option value="" disabled selected></option>
+						<option value="1">January</option>
+						<option value="2">February</option>
+						<option value="3">March</option>
+						<option value="4">April</option>
+						<option value="5">May</option>
+					</select>
+					<select class="payment__input payment__input--30" name="year" required>
+						<option value="" disabled selected></option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+					</select>
+				</div>
+			</div>
+			<div class="payment__group">
+				<label for="cvv" class="payment__label">CVV</label>
+				<input class="payment__input payment__input--30" type="text" name="cvv" id="cvv" required minlength="3" maxlength="4" pattern="\d{3,4}" placeholder=" ">
+				<span class="payment__hint">3 or 4 digits - <a class="payment__link" href="#">view example</a></span>
+			</div>
+			<div class="payment__foot">
+				<button class="payment__submit" type="submit">Pay</button>
+				<a class="payment__link" href="#">Cancel order</a>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
